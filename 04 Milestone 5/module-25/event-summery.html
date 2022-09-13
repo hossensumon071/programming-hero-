@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Summery</title>
+</head>
+<body>
+    <h1>FInal DOM event Handlers</h1>
+    <h2 id="input-text-display">Deafault input text</h2>
+    <input type="text" id="input-feild">
+    <button id="btn-update">update</button>
+    <br>
+    <br>
+    <br>
+    <h3 id="hand-status">Default text</h3>
+    <button onclick="handleOnClick()">submit me</button>
+    <button id="bla">now</button>
+
+
+
+    <script src="main.js"></script>
+    <script>
+       
+        document.getElementById('bla').addEventListener('click', function(){
+            const fu = document.getElementById('hand-status');
+                fu.innerText = 'ami tumake bhalobasi'
+        }) 
+
+        document.getElementById('btn-update').addEventListener('click', function(){
+            const inputFeild = document.getElementById('input-feild');
+            const inputText = inputFeild.value
+
+            const p = document.getElementById('input-text-display');
+            p.innerText = inputText;
+            inputFeild.value = ''
+        })
+    </script>
+</body>
+</html>
